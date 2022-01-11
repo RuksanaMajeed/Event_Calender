@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+
+body {
+  line-height: 1;
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  background-color: #12121f;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+
+
+}
+button {
+  margin-right: 2.5px;
+  margin-left: 2.5px;
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #167e56;
+  /* color: white; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#nextButton,#nextButton{
+    
+  background-color:#167e56;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#header {
+  background-color: #167e56;
+  padding: 10px;
+  color: #fff;
+  font-size: 25px;
+  font-family: 'Muli', sans-serif;
+  /* font-family: sans-serif; */
+  display: flex;
+  justify-content: space-between;
+}
+#header button {
+  background-color:#167e56;
+  font-size: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#container {
+  width: 770px;
+}
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  align-items: baseline;
+  font-family: 'Muli', sans-serif;
+  background-color:  #222227;
+
+
+}
+#weekdays div {
+  width: 100px;
+  padding: 1em;
+  cursor: default;
+  align-content: center;
+  
+}
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  background-color: #222227;
+  flex-wrap: wrap;
+
+}
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color:#222227;
+  color: #fff;
+  margin: 5px;
+  /* box-shadow: 0px 0px 3px #CBD4C2; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+.day:hover {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
+
+}
+
+.day + .currentDay {
+  background-color:#167e56;
+  
+}
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #e45876;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+.padding {
+  /* cursor: default !important; */
+  background-color: #222227 !important;
+  /* box-shadow: none !important; */
+}
+#newEventModal, #deleteEventModal {
+  z-index: 20;
+  padding: 25px;
+  background-color: #167e56;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+h2{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#cancelButton, #deleteButton {
+  background-color: #d36c6c;
+}
+#saveButton, #closeButton {
+  background-color: #92a1d1;
+}
+#eventText {
+  font-size: 25px;
+  color: white;
+}
+#modalBackDrop {
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ #date-header {
+  height:100%;
+  line-height: 3em;
+  padding: 0em 2em;
+  background-color: rgba(0,0,0,0.30);
 }
