@@ -1,4 +1,4 @@
-[Project Demo:]https://ruksanamajeed.github.io/Event_Calender/).
+[Project Demo:](https://ruksanamajeed.github.io/Event_Calender/).
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
