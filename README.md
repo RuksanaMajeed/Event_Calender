@@ -1,4 +1,3 @@
-# Analyzing the Bundle Size
 
 Project Demo: [https://ruksanamajeed.github.io/Event_Calender/](https://ruksanamajeed.github.io/Event_Calender/)
 # Getting Started with Create React App
