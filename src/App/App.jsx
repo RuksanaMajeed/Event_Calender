@@ -8,18 +8,18 @@ import { DeleteEventModel } from '../Components/DeleteEventModel/DeleteEventMode
 
 export const App = () => {
     const [nav, setNav] = useState(0) ;
-    const [days, setDays] = useState([])
+    const [days, setDays] = useState([]);
     const [dateDisplay,setDateDisplay] = useState();
     const [clicked, setClicked] = useState();
 
     const [events, setEvents] = useState(localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : []);
     
-    consr eventFordate = useCallback((date) => {
+    const eventFordate = useCallback((date) => {
         events.find(e =>e.date ===date);
     }, [events])
 
     useEffect(() => {
-        localStorage.setItem('events',JSON.stringify(events))
+        localStorage.setItem('events',JSON.stringify(events));
     }, [events])
 
     useEffect(() => {
