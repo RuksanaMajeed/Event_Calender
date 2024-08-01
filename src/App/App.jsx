@@ -68,7 +68,7 @@ export const App = () => {
         }
     
         setDays(daysArr);
-      }, [events, nav]);
+      }, [events, nav, eventFordate]);
     
       
     //works when both events and nav changes
