@@ -14,8 +14,9 @@ export const App = () => {
 
     const [events, setEvents] = useState(localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : []);
     
-    
-    const eventFordate=date=>events.find(e =>e.date ===date);
+    consr eventFordate = useCallback((date) => {
+        events.find(e =>e.date ===date)
+    }, [events])
 
     useEffect(() => {
         localStorage.setItem('events',JSON.stringify(events))
